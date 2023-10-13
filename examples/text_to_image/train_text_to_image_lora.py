@@ -567,6 +567,7 @@ def main():
         caption_column = dataset_columns[1] if dataset_columns is not None else column_names[1]
     else:
         caption_column = args.caption_column
+        # print(f'column_names: {column_names}')
         if caption_column not in column_names:
             raise ValueError(
                 f"--caption_column' value '{args.caption_column}' needs to be one of: {', '.join(column_names)}"
