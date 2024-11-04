@@ -1,0 +1,10 @@
+services:
+  diffusers-env:
+    container_name: diffusers-1
+    network_mode: host
+    ipc: host
+    image: diffusers
+    volumes:
+      - /data/:/data/
+    restart: unless-stopped
+    tty: true
